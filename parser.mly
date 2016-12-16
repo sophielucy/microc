@@ -7,7 +7,7 @@ open Ast
 %token SEMI LPAREN RPAREN LBRACE RBRACE COMMA
 %token PLUS MINUS TIMES DIVIDE ASSIGN NOT
 %token EQ NEQ LT LEQ GT GEQ TRUE FALSE AND OR
-%token RETURN IF ELSE FOR WHILE INT BOOL VOID
+%token RETURN IF ELSE FOR WHILE INT FLOAT BOOL VOID
 %token <int> LITERAL
 %token <float> FLOATLIT
 %token <string> ID
@@ -88,7 +88,7 @@ expr_opt:
 
 expr:
     LITERAL          { Literal($1) }
-  | FLOATLIT         { FloatLiteral ($1) }
+  | FLOATLIT         { FloatLit ($1) }
   | TRUE             { BoolLit(true) }
   | FALSE            { BoolLit(false) }
   | ID               { Id($1) }
