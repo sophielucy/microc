@@ -1,0 +1,3 @@
+ocamlbuild -use-ocamlfind -pkgs llvm,llvm.analysis -cflags -w,+a-4 \
+		microc.native
+Failure: ocamlfind not found on path, but -no-ocamlfind not used.
